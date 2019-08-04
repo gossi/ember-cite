@@ -9,7 +9,8 @@ export interface MultimediaFields {
 
 export default class MultimediaReference extends Reference
   implements MultimediaFields {
-  medium?: Medium;
-  series?: string;
   type = ReferenceType.MULTIMEDIA;
+
+  // medium?: Medium;
+  // series?: string;
 }

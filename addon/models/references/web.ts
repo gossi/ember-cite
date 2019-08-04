@@ -9,5 +9,5 @@ export interface WebFields {
 export default class WebReference extends Reference implements WebFields {
   type = ReferenceType.WEB;
 
-  format?: WebFormat;
+  // format?: WebFormat;
 }
