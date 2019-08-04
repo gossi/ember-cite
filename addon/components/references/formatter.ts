@@ -1,8 +1,10 @@
 import ApaFormatter from 'ember-cite/components/references/formatter/apa/formatter';
-import { Reference } from 'ember-cite/components/references/reference';
+import Reference from 'ember-cite/models/reference';
 
 export interface Formatter {
   sort(references: Reference[]): Reference[];
+
+  fix(references: Reference[]): void;
 }
 
 export default class FormatterFactory {

@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 
-import { Person } from 'ember-cite/components/references/reference';
+import Person from 'ember-cite/models/person';
 
 interface ReferencesFormatterApaPeopleArgs {
   people: Person[];

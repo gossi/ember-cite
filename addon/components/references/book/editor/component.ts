@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { Owner } from '@glimmer/di';
 
-import ReferencesBookComponent from 'dummy/components/references/book';
+import ReferencesBookComponent from 'ember-cite/components/references/book/component';
 
 interface ReferencesRefEditorArgs {
   parent: ReferencesBookComponent;

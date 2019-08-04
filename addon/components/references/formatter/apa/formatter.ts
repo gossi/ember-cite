@@ -51,19 +51,29 @@ export default class ApaFormatter implements Formatter {
     });
   }
 
-  fixYear(references: Reference[]): Reference[] {
-    return (
-      references
-        // reset year suffix
-        .map(r => {
-          return {
-            ...r,
-            yearSuffx: ''
-          };
-        })
+  fix(references: Reference[]) {
+    this.fixYear(references);
+  }
 
-      // // set suffix if two publications from the same author in the same year
-      // .map((r) => r)
-    );
+  private fixYear(entries: Reference[]) {
+    const store: { [rawId: string]: Reference[] } = {};
+    for (const entry of entries) {
+      const id = entry.compileRawId();
+      if (!store[id]) {
+        store[id] = [];
+      }
+
+      store[id].push(entry);
+    }
+
+    for (const references of Object.values(store)) {
+      if (references.length > 1) {
+        for (const reference of references) {
+          const i = references.indexOf(reference);
+          reference.yearSuffix = String.fromCharCode(97 + i);
+          reference.updateId();
+        }
+      }
+    }
   }
 }
