@@ -32,5 +32,29 @@ export default class ReferencesComponent extends Component<ReferencesArgs> {
 
   addReference(reference: Reference) {
     this.entries.push(reference);
+
+    this.fixYearSuffices();
+  }
+
+  private fixYearSuffices() {
+    const store: { [rawId: string]: Reference[] } = {};
+    for (const entry of this.entries) {
+      const id = entry.compileRawId();
+      if (!store[id]) {
+        store[id] = [];
+      }
+
+      store[id].push(entry);
+    }
+
+    for (const references of Object.values(store)) {
+      if (references.length > 1) {
+        for (const reference of references) {
+          const i = references.indexOf(reference);
+          reference.yearSuffix = String.fromCharCode(97 + i);
+          reference.updateId();
+        }
+      }
+    }
   }
 }

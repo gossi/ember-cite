@@ -19,5 +19,6 @@ export default class ReferencesBaseComponent<T extends object>
 
   addAuthor(person: Person) {
     this.reference.authors.push(person);
+    this.reference.updateId();
   }
 }
