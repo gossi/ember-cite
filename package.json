@@ -1,17 +1,19 @@
 {
   "name": "ember-cite",
   "version": "0.0.0",
-  "description": "Small description for ember-cite goes here",
+  "description": "Academic/Scientific citation with microformats",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "academic",
+    "scientific",
+    "writing",
+    "citation",
+    "references",
+    "bibliography"
   ],
-  "repository": "",
+  "repository": "https://github.com/gossi/ember-cite",
   "license": "MIT",
-  "author": "",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
+  "author": "Thomas Gossmann",
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
