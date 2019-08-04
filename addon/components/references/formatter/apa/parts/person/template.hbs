@@ -1,0 +1,13 @@
+<span itemscope itemprop={{if @as @as}} itemtype="http://schema.org/Person">
+  {{#if @person.name}}
+    <span itemprop="name">{{@person.name}}</span>
+  {{else}}
+    {{#if (eq @as 'editor')}}
+      {{this.initials}} <span itemprop="familyName">{{@person.family}}</span>
+    {{else}}
+      <span itemprop="familyName">{{@person.family}}</span>, {{this.initials}}
+    {{/if}}
+
+    <meta itemprop="givenName" content="{{@person.given}}">
+  {{/if}}
+</span>

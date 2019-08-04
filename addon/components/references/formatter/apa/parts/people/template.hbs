@@ -1,0 +1,8 @@
+{{#each @people as |p index|}}
+  <References::Formatter::Apa::Parts::Person @person={{p}} @as={{@as}} />
+  {{#if (eq index this.amount)}}
+    &
+  {{else if (lt index this.amount)}}
+    ,
+  {{/if}}
+{{/each}}

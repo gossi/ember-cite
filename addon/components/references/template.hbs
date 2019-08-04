@@ -1,0 +1,10 @@
+{{yield (hash
+  Book=(component 'references/book' parent=this)
+  Journal=(component 'references/journal' parent=this)
+  Web=(component 'references/web' parent=this)
+  Multimedia=(component 'references/multimedia' parent=this)
+)}}
+
+{{#let (concat 'references/formatter/' this.style) as |Listings|}}
+  <Listings @references={{this.references}} ...attributes />
+{{/let}}

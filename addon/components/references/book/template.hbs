@@ -1,0 +1,5 @@
+<References::Base @parent={{this}} as |ref|>
+  {{yield (assign ref (hash
+    Editor=(component "references/book/editor" parent=this)
+  ))}}
+</References::Base>

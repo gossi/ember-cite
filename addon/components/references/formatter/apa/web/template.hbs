@@ -1,0 +1,10 @@
+<li itemscope itemprop="citation" itemtype="http://schema.org/WebPage">
+  <References::Formatter::Apa::Parts::Authors @reference={{@reference}} />
+  <span itemprop="name">{{@reference.title}}</span>
+
+  {{~#if @reference.format~}}
+  . [{{@reference.format}}]
+  {{~/if~}}
+
+  <References::Formatter::Apa::Parts::Source @reference={{@reference}} />
+</li>

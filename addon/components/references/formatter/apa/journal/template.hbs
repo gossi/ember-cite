@@ -1,0 +1,31 @@
+<li itemscope itemprop="citation" itemtype="http://schema.org/ScholarlyArticle">
+  <References::Formatter::Apa::Parts::Authors @reference={{@reference}} />
+  <span itemprop="name">{{@reference.title}}</span>.
+
+  {{#if @reference.journal}}
+    <span itemscope itemprop="isPartOf" itemtype="http://schema.org/PublicationIssue" itemid="#issue">
+      <span itemscope itemtype="http://schema.org/Periodical" itemid="#periodical-{{@reference.id}}">
+        <cite>
+          <span itemprop="name">{{@reference.journal}}</span>
+          {{#if @reference.volume}}
+            ,
+            <span itemscope itemprop="isPartOf" itemtype="http://schema.org/PublicationVolume">
+              <link itemprop="isPartOf" href="#periodical-{{@reference.id}}" />
+              <span itemprop="volumeNumber">{{@reference.volumne}}</span>
+            </span>
+          {{/if}}
+        </cite>
+      </span>
+    </span>
+
+    {{~#if @reference.number~}}
+    (<span itemprop="issueNumber">{{@reference.number}}</span>)
+    {{~/if~}}
+
+    {{~#if @reference.pages~}}
+    <span itemprop="pagination">{{@reference.pages}}</span>
+    {{~/if~}}.
+  {{/if}}
+
+  <References::Formatter::Apa::Parts::Source @reference={{@reference}} />
+</li>

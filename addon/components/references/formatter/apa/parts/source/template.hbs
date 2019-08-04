@@ -1,0 +1,13 @@
+{{~#if @reference.doi~}}
+. <a itemprop="sameAs" href="https://dx.doi.org/{{@reference.doi}}" target="_blank">doi:{{@reference.doi}}</a>
+{{~else if @reference.url~}}
+. {{t 'references.retrieved'}}
+
+{{#if @reference.retrieval}}
+  {{@reference.retrieval}}
+{{/if}}
+
+{{t 'references.from'}}
+
+<a href="{{@reference.url}}" itemprop="url" target="_blank">{{@reference.url}}</a>.
+{{~/if~}}

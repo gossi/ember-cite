@@ -1,38 +1,32 @@
-ember-references
-==============================================================================
+# ember-references
 
-[Short description of the addon.]
+This addon enables you write an academic/scientific reference list
 
+## Installation
 
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v2.18 or above
-* Ember CLI v2.13 or above
-* Node.js v8 or above
-
-
-Installation
-------------------------------------------------------------------------------
-
-```
+```bash
 ember install ember-references
 ```
 
-
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 [Longer description of how to use the addon in apps.]
 
+### References
 
-Contributing
-------------------------------------------------------------------------------
+Here are links to APA citation standard:
+
+- [APA @ AIT Library](https://ait.libguides.com/APA)
+- [APA Style Guide to Electronic References](http://www.misericordia.edu/uploaded/documents/library/Books/APAStyle.pdf?1436800286903)
+
+## Compatibility
+
+- Canary ?
+
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
