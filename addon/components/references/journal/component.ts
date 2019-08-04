@@ -1,11 +1,11 @@
 import { Owner } from '@glimmer/di';
 
-import ReferencesBaseComponent from 'ember-references/components/references/base/component';
-import ReferencesComponent from 'ember-references/components/references/component';
-import { ReferenceFields } from 'ember-references/models/reference';
+import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
+import ReferencesComponent from 'ember-cite/components/references/component';
+import { ReferenceFields } from 'ember-cite/models/reference';
 import JournalReference, {
   JournalFields
-} from 'ember-references/models/references/journal';
+} from 'ember-cite/models/references/journal';
 
 interface ReferencesJournalArgs extends JournalFields, ReferenceFields {
   parent: ReferencesComponent;

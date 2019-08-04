@@ -1,8 +1,8 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
-import Person from 'ember-references/models/person';
-import Reference from 'ember-references/models/reference';
+import Person from 'ember-cite/models/person';
+import Reference from 'ember-cite/models/reference';
 
 export interface BaseComponent {
   addAuthor: (author: Person) => void;

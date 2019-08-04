@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { Owner } from '@glimmer/di';
 
-import { BaseComponent } from 'ember-references/components/references/base/component';
+import { BaseComponent } from 'ember-cite/components/references/base/component';
 
 interface ReferencesRefAuthorArgs {
   parent: BaseComponent;

@@ -1,3 +1,3 @@
 export {
   default
-} from 'ember-references/components/references/journal/component';
+} from 'ember-cite/components/references/journal/component';

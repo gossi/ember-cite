@@ -1,5 +1,5 @@
-import ApaFormatter from 'ember-references/components/references/formatter/apa/formatter';
-import { Reference } from 'ember-references/components/references/reference';
+import ApaFormatter from 'ember-cite/components/references/formatter/apa/formatter';
+import { Reference } from 'ember-cite/components/references/reference';
 
 export interface Formatter {
   sort(references: Reference[]): Reference[];

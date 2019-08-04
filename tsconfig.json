@@ -23,10 +23,10 @@
     "paths": {
       "dummy/tests/*": ["tests/*"],
       "dummy/*": ["tests/dummy/app/*", "app/*"],
-      "ember-references": ["addon"],
-      "ember-references/*": ["addon/*"],
-      "ember-references/test-support": ["addon-test-support"],
-      "ember-references/test-support/*": ["addon-test-support/*"],
+      "ember-cite": ["addon"],
+      "ember-cite/*": ["addon/*"],
+      "ember-cite/test-support": ["addon-test-support"],
+      "ember-cite/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
     }
   },

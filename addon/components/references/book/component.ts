@@ -1,12 +1,12 @@
 import { Owner } from '@glimmer/di';
 
-import ReferencesBaseComponent from 'ember-references/components/references/base/component';
-import ReferencesComponent from 'ember-references/components/references/component';
-import Person from 'ember-references/models/person';
-import { ReferenceFields } from 'ember-references/models/reference';
+import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
+import ReferencesComponent from 'ember-cite/components/references/component';
+import Person from 'ember-cite/models/person';
+import { ReferenceFields } from 'ember-cite/models/reference';
 import BookReference, {
   BookFields
-} from 'ember-references/models/references/book';
+} from 'ember-cite/models/references/book';
 
 interface ReferencesBookArgs extends BookFields, ReferenceFields {
   parent: ReferencesComponent;

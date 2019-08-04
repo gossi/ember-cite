@@ -1,6 +1,6 @@
-import { Formatter } from 'ember-references/components/references/formatter';
-import Person from 'ember-references/models/person';
-import Reference from 'ember-references/models/reference';
+import { Formatter } from 'ember-cite/components/references/formatter';
+import Person from 'ember-cite/models/person';
+import Reference from 'ember-cite/models/reference';
 
 export default class ApaFormatter implements Formatter {
   sort(references: Reference[]): Reference[] {

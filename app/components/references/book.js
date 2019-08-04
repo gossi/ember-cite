@@ -1,1 +1,1 @@
-export { default } from 'ember-references/components/references/book/component';
+export { default } from 'ember-cite/components/references/book/component';

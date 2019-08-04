@@ -1,3 +1,3 @@
 export {
   default
-} from 'ember-references/components/references/formatter/apa/parts/people/template';
+} from 'ember-cite/components/references/formatter/apa/parts/people/template';

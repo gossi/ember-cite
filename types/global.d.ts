@@ -1,5 +1,5 @@
 // Types for compiled templates
-declare module 'ember-references/templates/*' { 
+declare module 'ember-cite/templates/*' { 
   import { TemplateFactory } from 'htmlbars-inline-precompile';
   const tmpl: TemplateFactory;
   export default tmpl;

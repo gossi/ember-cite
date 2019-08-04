@@ -1,6 +1,6 @@
-import Reference from 'ember-references/models/reference';
-import { Medium } from 'ember-references/types/media';
-import { ReferenceType } from 'ember-references/types/reference';
+import Reference from 'ember-cite/models/reference';
+import { Medium } from 'ember-cite/types/media';
+import { ReferenceType } from 'ember-cite/types/reference';
 
 export interface MultimediaFields {
   medium?: Medium;

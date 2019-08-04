@@ -1,7 +1,7 @@
 import { tracked } from '@glimmer/tracking';
 
-import Person from 'ember-references/models/person';
-import { ReferenceType } from 'ember-references/types/reference';
+import Person from 'ember-cite/models/person';
+import { ReferenceType } from 'ember-cite/types/reference';
 
 import TrackedArray from 'tracked-array';
 

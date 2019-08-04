@@ -1,6 +1,6 @@
-import Reference from 'ember-references/models/reference';
-import { ReferenceType } from 'ember-references/types/reference';
-import { WebFormat } from 'ember-references/types/web';
+import Reference from 'ember-cite/models/reference';
+import { ReferenceType } from 'ember-cite/types/reference';
+import { WebFormat } from 'ember-cite/types/web';
 
 export interface WebFields {
   format?: WebFormat;

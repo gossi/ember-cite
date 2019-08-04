@@ -4,8 +4,8 @@ import { tracked } from '@glimmer/tracking';
 
 import FormatterFactory, {
   Formatter
-} from 'ember-references/components/references/formatter';
-import Reference from 'ember-references/models/reference';
+} from 'ember-cite/components/references/formatter';
+import Reference from 'ember-cite/models/reference';
 
 import TrackedArray from 'tracked-array';
 

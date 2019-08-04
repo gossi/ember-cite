@@ -1,6 +1,6 @@
-import Person from 'ember-references/models/person';
-import Reference from 'ember-references/models/reference';
-import { ReferenceType } from 'ember-references/types/reference';
+import Person from 'ember-cite/models/person';
+import Reference from 'ember-cite/models/reference';
+import { ReferenceType } from 'ember-cite/types/reference';
 
 import TrackedArray from 'tracked-array';
 
