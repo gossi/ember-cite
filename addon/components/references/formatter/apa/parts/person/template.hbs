@@ -10,4 +10,8 @@
 
     <meta itemprop="givenName" content="{{@person.given}}">
   {{/if}}
+
+  {{#if @person.role}}
+    ({{@person.role}})
+  {{/if}}
 </span>

@@ -15,7 +15,7 @@ export interface ThesisFields {
 }
 
 export default class ThesisReference extends Reference implements ThesisFields {
-  type = ReferenceType.THESIS;
+  type = ReferenceType.Thesis;
 
   document?: string;
   institution?: string;

@@ -1,24 +1,22 @@
-<li itemscope itemprop="citation" itemtype="http://schema.org/MediaObject" itemid="{{@reference.id}}"
-  isPartOf={{if @reference.series (concat @reference.id '-series')}}>
+<li itemscope itemprop="citation" itemtype="http://schema.org/{{this.type}}" id="{{@reference.id}}">
   <References::Formatter::Apa::Parts::Authors @reference={{@reference}} />
 
   {{~#if @reference.series~}}
   <span itemprop="name">{{@reference.title}}</span>
 
   {{#if @reference.medium}}
-    [{{@reference.medium}}]
+    [{{t (concat 'references.medium.' @reference.medium)}}]
     {{~/if~}}
 
     . {{t "references.in"}}
 
-    <span itemscope itemtype="http://schema.org/CreativeWorkSeries"
-    itemid="{{@reference.id}}-series"><cite
+    <span itemprop="partOfSeries" itemscope itemtype="http://schema.org/{{this.seriesType}}"><cite
         itemprop="name">{{@reference.series}}</cite></span>
     {{~else~}}
     <cite itemprop="name">{{@reference.title}}</cite>
 
     {{#if @reference.medium}}
-      [{{@reference.medium}}]
+      [{{t (concat 'references.medium.' @reference.medium)}}]
       {{~/if~}}
       {{~/if~}}
 

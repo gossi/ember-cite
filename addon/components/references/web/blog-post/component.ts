@@ -6,19 +6,19 @@ import { ReferenceFields } from 'ember-cite/models/reference';
 import WebReference, { WebFields } from 'ember-cite/models/references/web';
 import { WebFormat } from 'ember-cite/types/web';
 
-export interface ReferencesWebArgs extends WebFields, ReferenceFields {
+interface ReferencesWebBlogPostArgs extends WebFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesWebComponent extends ReferencesBaseComponent<
-  ReferencesWebArgs
+export default class ReferencesWebBlogPostComponent extends ReferencesBaseComponent<
+  ReferencesWebBlogPostArgs
 > {
   reference: WebReference;
 
-  constructor(owner: Owner, args: ReferencesWebArgs) {
+  constructor(owner: Owner, args: ReferencesWebBlogPostArgs) {
     super(owner, args);
 
-    this.reference = new WebReference(WebFormat.WebPage, args);
+    this.reference = new WebReference(WebFormat.BlogPost, args);
 
     args.parent.addReference(this.reference);
   }

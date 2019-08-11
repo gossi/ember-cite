@@ -5,3 +5,12 @@ references:
   pp: pp
   ed: Ed
   eds: Eds
+
+  format:
+    blog-post: Blog Post
+    blog-comment: Blog Comment
+
+  medium:
+    tv-episode: Television series episode
+    webisode: Webisode
+    video: Video file

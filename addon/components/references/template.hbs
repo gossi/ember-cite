@@ -1,8 +1,13 @@
 {{yield (hash
   Book=(component 'references/book' parent=this)
-  Journal=(component 'references/journal' parent=this)
+  Article=(component 'references/article' parent=this)
+
   Web=(component 'references/web' parent=this)
-  Multimedia=(component 'references/multimedia' parent=this)
+  BlogPost=(component 'references/web/blog-post' parent=this)
+
+  Video=(component 'references/media/video' parent=this)
+  TvEpisode=(component 'references/media/tv-episode' parent=this)
+  Webisode=(component 'references/media/webisode' parent=this)
 )}}
 
 {{#let (concat 'references/formatter/' this.style) as |Listings|}}

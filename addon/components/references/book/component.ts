@@ -1,20 +1,20 @@
 import { Owner } from '@glimmer/di';
 
-import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
+import ReferencesBaseComponent, {
+  EditoredComponent
+} from 'ember-cite/components/references/base/component';
 import ReferencesComponent from 'ember-cite/components/references/component';
 import Person from 'ember-cite/models/person';
 import { ReferenceFields } from 'ember-cite/models/reference';
-import BookReference, {
-  BookFields
-} from 'ember-cite/models/references/book';
+import BookReference, { BookFields } from 'ember-cite/models/references/book';
 
 interface ReferencesBookArgs extends BookFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesBookComponent extends ReferencesBaseComponent<
-  ReferencesBookArgs
-> {
+export default class ReferencesBookComponent
+  extends ReferencesBaseComponent<ReferencesBookArgs>
+  implements EditoredComponent {
   reference: BookReference;
 
   constructor(owner: Owner, args: ReferencesBookArgs) {

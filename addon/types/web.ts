@@ -1,4 +1,5 @@
 export enum WebFormat {
+  WebPage = 'web-page',
   BlogPost = 'blog-post',
   BlogComment = 'blog-comment',
   ForumComment = 'forum-comment',

@@ -1,13 +1,25 @@
 export enum Medium {
-  Dvd = 'dvd',
-  Video = 'video',
-  TelevisionSeries = 'television-series',
-  Episode = 'episode',
-  Webisode = 'webisode',
+  Media = 'media-object',
+
+  // media
   Recording = 'recording',
-  AudioPodcast = 'audio-podcast',
-  VideoPodcast = 'video-podcast',
+  Video = 'video',
+  Movie = 'movie',
   Map = 'map',
   Painting = 'painting',
-  Photograph = 'photograph'
+  Photograph = 'photograph',
+
+  // series
+  Series = 'series',
+  TvSeries = 'tv-series',
+  MovieSeries = 'movie-series',
+
+  // episodes
+  Episode = 'episode',
+  Webisode = 'webisode',
+  TvEpisode = 'tv-episode',
+
+  // podcasts
+  AudioPodcast = 'audio-podcast',
+  VideoPodcast = 'video-podcast'
 }

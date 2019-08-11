@@ -1,14 +1,14 @@
 import Component from '@glimmer/component';
 import { Owner } from '@glimmer/di';
 
-import { BaseComponent } from 'ember-cite/components/references/base/component';
+import {
+  BaseComponent,
+  PersonArgs
+} from 'ember-cite/components/references/base/component';
+import { argsToPerson } from 'ember-cite/utils/person';
 
-interface ReferencesRefAuthorArgs {
+interface ReferencesRefAuthorArgs extends PersonArgs {
   parent: BaseComponent;
-  given: string;
-  family: string;
-  middle: string;
-  name: string;
 }
 
 export default class ReferencesReferenceAuthorComponent extends Component<
@@ -16,12 +16,6 @@ export default class ReferencesReferenceAuthorComponent extends Component<
 > {
   constructor(owner: Owner, args: ReferencesRefAuthorArgs) {
     super(owner, args);
-
-    const middle = args.middle ? args.middle.split(' ') : [];
-
-    args.parent.addAuthor({
-      ...args,
-      middle
-    });
+    args.parent.addAuthor(argsToPerson(args));
   }
 }

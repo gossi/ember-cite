@@ -1,16 +1,7 @@
 export enum ReferenceType {
-  BOOK = 'book',
-  JOURNAL = 'journal',
-  THESIS = 'thesis',
-  WEB = 'web',
-
-  INCOLLECTION = 'incollection',
-  URL = 'url',
-  UNPUBLISHED = 'unpublished',
-  BACHELORTHESIS = 'bachelorthesis',
-  MASTERTHESIS = 'masterthesis',
-  DIPLOMATHESIS = 'diplomathesis',
-  PHDTHESIS = 'phdthesis',
-  HABILITATIONTHESIS = 'habilitationthesis',
-  MULTIMEDIA = 'multimedia'
+  Book = 'book',
+  Journal = 'journal',
+  Thesis = 'thesis',
+  Web = 'web',
+  Media = 'media'
 }

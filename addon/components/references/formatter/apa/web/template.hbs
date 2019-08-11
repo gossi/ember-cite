@@ -1,9 +1,9 @@
-<li itemscope itemprop="citation" itemtype="http://schema.org/WebPage">
+<li itemscope itemprop="citation" itemtype="http://schema.org/{{this.type}}">
   <References::Formatter::Apa::Parts::Authors @reference={{@reference}} />
   <span itemprop="name">{{@reference.title}}</span>
 
   {{~#if @reference.format~}}
-  . [{{@reference.format}}]
+  . [{{t (concat 'references.format.' @reference.format)}}]
   {{~/if~}}
 
   <References::Formatter::Apa::Parts::Source @reference={{@reference}} />

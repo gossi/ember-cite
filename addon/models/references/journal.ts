@@ -10,7 +10,7 @@ export interface JournalFields {
 
 export default class JournalReference extends Reference
   implements JournalFields {
-  type = ReferenceType.JOURNAL;
+  type = ReferenceType.Journal;
 
   journal?: string;
   volume?: number;
