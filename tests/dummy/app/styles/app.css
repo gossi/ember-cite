@@ -1,0 +1,8 @@
+:root {
+  --brand-primary: #080;
+}
+
+a:link,
+a:visited {
+  color: #3d4852;
+}

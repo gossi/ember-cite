@@ -1,12 +1,28 @@
-import EmberRouter from '@ember/routing/router';
+import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
+
 import config from './config/environment';
 
-const Router = EmberRouter.extend({
+const Router = AddonDocsRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
 Router.map(function() {
+  docsRoute(this, function() {
+    this.route('references');
+    this.route('common');
+    this.route('person');
+    this.route('episode');
+
+    this.route('book');
+    this.route('journal');
+
+    this.route('blog-post');
+
+    this.route('video');
+    this.route('tv-episode');
+    this.route('webisode');
+  });
 });
 
 export default Router;
