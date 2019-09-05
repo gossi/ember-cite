@@ -1,4 +1,8 @@
 <References::Formatter::Apa::Parts::People @as="author" @people={{@reference.authors}} />
-{{#if @reference.year}}
-  (<span itemprop="datePublished">{{@reference.year}}</span>{{@reference.yearSuffix}}).
-{{/if}}
+(
+{{~#if @reference.year~}}
+<span itemprop="datePublished">{{@reference.year}}</span>{{@reference.yearSuffix}}
+{{~else~}}
+n.d.
+{{~/if~}}
+).
