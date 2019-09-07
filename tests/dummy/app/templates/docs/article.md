@@ -1,4 +1,4 @@
-# Journal
+# Article
 
 An article from a journal.
 

@@ -15,7 +15,7 @@ Router.map(function() {
     this.route('episode');
 
     this.route('book');
-    this.route('journal');
+    this.route('article');
 
     this.route('blog-post');
 
