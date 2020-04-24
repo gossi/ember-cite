@@ -29,7 +29,7 @@ export default class ReferencesComponent extends Component<ReferencesArgs> {
     this.formatter = FormatterFactory.createFormattter(this.style);
   }
 
-  addReference(reference: Reference[]) {
+  addReference(reference: Reference) {
     this.entries.push(reference);
 
     this.formatter.fix(this.entries);
