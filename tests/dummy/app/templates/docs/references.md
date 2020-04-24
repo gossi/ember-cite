@@ -14,7 +14,7 @@ chosen citation standard.
 
 - `listing` (hash)
   - `Book` (<LinkTo @route="docs.book">Book</LinkTo>)
-  - `Journal` (<LinkTo @route="docs.journal">Journal</LinkTo>)
+  - `Article` (<LinkTo @route="docs.article">Article</LinkTo>)
   - `BlogPost` (<LinkTo @route="docs.blog-post">Blog Post</LinkTo>)
   - `Video` (<LinkTo @route="docs.video">Video</LinkTo>)
   - `TvEpisode` (<LinkTo @route="docs.tv-episode">TV Episode</LinkTo>)

@@ -1,9 +1,7 @@
-import { tracked } from '@glimmer/tracking';
-
 import Person from 'ember-cite/models/person';
 import { ReferenceType } from 'ember-cite/types/reference';
 
-import TrackedArray from 'tracked-array';
+import { tracked } from 'tracked-built-ins';
 
 export interface ReferenceFields {
   id?: string;
@@ -37,9 +35,9 @@ export default abstract class Reference implements ReferenceFields {
   retrieval?: string;
   doi?: string;
 
-  authors: Person[] = new TrackedArray();
+  @tracked authors: Person[] = [];
 
-  private manageId: boolean = false;
+  private manageId = false;
 
   constructor(properties: ReferenceFields) {
     Object.assign(this, properties);

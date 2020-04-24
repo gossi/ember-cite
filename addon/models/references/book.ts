@@ -2,7 +2,7 @@ import Person from 'ember-cite/models/person';
 import Reference from 'ember-cite/models/reference';
 import { ReferenceType } from 'ember-cite/types/reference';
 
-import TrackedArray from 'tracked-array';
+import { tracked } from 'tracked-built-ins';
 
 export interface BookFields {
   edition?: string;
@@ -17,5 +17,5 @@ export interface BookFields {
 export default class BookReference extends Reference implements BookFields {
   type = ReferenceType.Book;
 
-  editors: Person[] = new TrackedArray();
+  @tracked editors: Person[] = [];
 }

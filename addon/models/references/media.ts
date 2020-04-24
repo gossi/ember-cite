@@ -3,7 +3,7 @@ import Reference, { ReferenceFields } from 'ember-cite/models/reference';
 import { Medium } from 'ember-cite/types/media';
 import { ReferenceType } from 'ember-cite/types/reference';
 
-import TrackedArray from 'tracked-array';
+import { tracked } from 'tracked-built-ins';
 
 export interface MediaFields {
   medium?: Medium;
@@ -14,7 +14,7 @@ export default class MediaReference extends Reference implements MediaFields {
 
   medium: Medium;
 
-  producers: Person[] = new TrackedArray();
+  @tracked producers: Person[] = [];
 
   constructor(medium: Medium, properties: ReferenceFields) {
     super(properties);

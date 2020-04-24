@@ -1,20 +1,19 @@
 import Component from '@glimmer/component';
 import { Owner } from '@glimmer/di';
-import { tracked } from '@glimmer/tracking';
 
 import FormatterFactory, {
   Formatter
 } from 'ember-cite/components/references/formatter';
 import Reference from 'ember-cite/models/reference';
 
-import TrackedArray from 'tracked-array';
+import { tracked } from 'tracked-built-ins';
 
 interface ReferencesArgs {
   style?: string;
 }
 
 export default class ReferencesComponent extends Component<ReferencesArgs> {
-  @tracked entries: Reference[] = new TrackedArray();
+  @tracked entries: Reference[] = [];
   formatter: Formatter;
 
   style: string;
@@ -30,7 +29,7 @@ export default class ReferencesComponent extends Component<ReferencesArgs> {
     this.formatter = FormatterFactory.createFormattter(this.style);
   }
 
-  addReference(reference: Reference) {
+  addReference(reference: Reference[]) {
     this.entries.push(reference);
 
     this.formatter.fix(this.entries);
