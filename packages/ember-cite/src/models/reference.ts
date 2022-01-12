@@ -1,8 +1,6 @@
 import Person from 'ember-cite/models/person';
 import { ReferenceType } from 'ember-cite/types/reference';
 
-import { tracked } from 'ember-deep-tracked';
-
 export interface ReferenceFields {
   id?: string;
   type?: ReferenceType;
@@ -23,7 +21,7 @@ export interface ReferenceFields {
 export default abstract class Reference implements ReferenceFields {
   abstract type: ReferenceType;
 
-  @tracked id?: string;
+  id: string = '';
   title?: string;
 
   year?: number;
@@ -35,14 +33,14 @@ export default abstract class Reference implements ReferenceFields {
   retrieval?: string;
   doi?: string;
 
-  @tracked authors: Person[] = [];
+  authors: Person[] = [];
 
   private manageId = false;
 
   constructor(properties: ReferenceFields) {
     Object.assign(this, properties);
 
-    if (!this.id) {
+    if (!this.id || this.id === '') {
       this.manageId = true;
       this.id = this.compileId();
     }

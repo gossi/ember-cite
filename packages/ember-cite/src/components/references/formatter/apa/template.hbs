@@ -1,6 +1,6 @@
 <ul ...attributes>
   {{#each @references as |r|}}
-    {{#let (concat 'references/formatter/apa/' r.type) as |Ref|}}
+    {{#let (component (ensure-safe-component (concat 'references/formatter/apa/' r.type))) as |Ref|}}
       <Ref @reference={{r}} />
     {{/let}}
   {{/each}}

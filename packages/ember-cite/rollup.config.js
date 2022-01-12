@@ -11,10 +11,10 @@ const addon = new Addon({
 const extensions = ['.js', '.ts'];
 
 const rollupConfig = {
-  input: ['src/**/*.ts'],
-
   // This provides defaults that work well alongside `publicEntrypoints` below.
   // You can augment this if you need to.
+  input: ['src/**/*.ts', 'src/**/*.hbs'],
+
   output: { ...addon.output(), entryFileNames: '[name].js' },
 
   plugins: [
@@ -38,14 +38,18 @@ const rollupConfig = {
     // See `babel.config.json` for the actual Babel configuration!
     babel({ babelHelpers: 'bundled', extensions }),
 
+
     // Follow the V2 Addon rules about dependencies. Your code can import from
     // `dependencies` and `peerDependencies` as well as standard Ember-provided
     // package names.
     addon.dependencies(),
 
+    // Ensure that standalone .hbs files are properly integrated as Javascript.
+    addon.hbs(),
+
     // addons are allowed to contain imports of .css files, which we want rollup
     // to leave alone and keep in the published output.
-    addon.keepAssets(['translations/**/*.yml']),
+    addon.keepAssets(['/**/*.yml']),
 
     // Remove leftover build artifacts when starting a new build.
     addon.clean()

@@ -1,8 +1,7 @@
 import Person from 'ember-cite/models/person';
 import Reference from 'ember-cite/models/reference';
 import { ReferenceType } from 'ember-cite/types/reference';
-
-import { tracked } from 'ember-deep-tracked';
+import { tracked } from 'tracked-built-ins';
 
 export interface BookFields {
   edition?: string;
@@ -17,5 +16,5 @@ export interface BookFields {
 export default class BookReference extends Reference implements BookFields {
   type = ReferenceType.Book;
 
-  @tracked editors: Person[] = [];
+  @tracked editors: Person[] = tracked([]);
 }

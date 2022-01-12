@@ -3,7 +3,7 @@
   <span itemprop="name">{{@reference.title}}</span>
 
   {{~#if @reference.format~}}
-  . [{{t (concat 'references.format.' @reference.format)}}]
+  . [{{t (concat 'ember-cite.references.format.' @reference.format)}}]
   {{~/if~}}
 
   <References::Formatter::Apa::Parts::Source @reference={{@reference}} />

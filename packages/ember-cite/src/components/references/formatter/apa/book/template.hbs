@@ -6,31 +6,31 @@
       <span itemprop="name">{{@reference.chapter}}</span>.
 
       {{#if @reference.editors}}
-        {{t "references.in"}}
+        {{t "ember-cite.references.in"}}
         <References::Formatter::Apa::Parts::People @as="editor" @people={{@reference.authors}} />.
       {{/if}}
     </span>
   {{/if}}
 
   <cite itemprop="name">{{@reference.title}}</cite>
-  {{#if @reference.edition}}
-    <span itemprop="bookEdition">{{@reference.edition}}</span>
-  {{/if}}
+  {{~#if @reference.edition~}}
+  <span itemprop="bookEdition">{{@reference.edition}}</span>
+  {{~/if~}}
   .
 
-  {{#if @reference.pages}}
-    ({{t "references.pp"}} <span itemprop="pagination">{{@reference.pages}}</span>).
-  {{/if}}
+  {{~#if @reference.pages~}}
+  ({{t "ember-cite.references.pp"}} <span itemprop="pagination">{{@reference.pages}}</span>).
+  {{~/if~}}
 
-  {{#if @reference.publisher}}
-    <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <span itemprop="name">{{@reference.publisher}}</span>
+  {{~#if @reference.publisher~}}
+  <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span itemprop="name">{{@reference.publisher}}</span>
 
-      {{#if @reference.address}}
-        : <span itemprop="address">{{@reference.address}}</span>
-      {{/if}}
-    </span>
-  {{/if}}
+    {{#if @reference.address}}
+      : <span itemprop="address">{{@reference.address}}</span>
+    {{/if}}
+  </span>
+  {{~/if~}}
 
   <References::Formatter::Apa::Parts::Source @reference={{@reference}} />
 </li>

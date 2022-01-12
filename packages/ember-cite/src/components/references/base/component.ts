@@ -1,5 +1,7 @@
 import Component from '@glimmer/component';
-import { tracked } from 'ember-deep-tracked';
+import { tracked } from '@glimmer/tracking';
+
+import { next } from '@ember/runloop';
 
 import Person from 'ember-cite/models/person';
 import Reference from 'ember-cite/models/reference';
@@ -31,10 +33,12 @@ export interface PersonArgs {
 export default class ReferencesBaseComponent<T extends object>
   extends Component<T>
   implements BaseComponent {
-  @tracked declare reference: Reference;
+  @tracked reference!: Reference;
 
   addAuthor(person: Person) {
     this.reference.authors.push(person);
-    this.reference.updateId();
+    next(() => {
+      this.reference.updateId();
+    });
   }
 }

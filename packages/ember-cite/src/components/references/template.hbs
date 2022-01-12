@@ -10,6 +10,6 @@
   Webisode=(component 'references/media/webisode' parent=this)
 )}}
 
-{{#let (concat 'references/formatter/' this.style) as |Listings|}}
+{{#let this.formatterComponent as |Listings|}}
   <Listings @references={{this.references}} ...attributes />
 {{/let}}
