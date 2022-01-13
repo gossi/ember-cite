@@ -1,9 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "allowJs": true,
+    "baseUrl": ".",
     "moduleResolution": "node",
+
+    "declarationDir": "./declarations",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+
+    "noEmitOnError": true,
+    "target": "ESNext",
+    "module": "ESNext",
+
+    "experimentalDecorators": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
+
+    "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
@@ -13,13 +25,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noEmitOnError": true,
-    "noEmit": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "baseUrl": ".",
-    "module": "es6",
-    "experimentalDecorators": true,
+
     "paths": {
       "ember-cite": [
         "src"
@@ -30,7 +36,6 @@
     }
   },
   "include": [
-    "src/**/*",
-    "types/**/*"
+    "src/**/*"
   ]
 }
