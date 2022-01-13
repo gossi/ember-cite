@@ -1,0 +1,43 @@
+:root {
+  --factor: 1.2;
+  --scaling: calc(0.5vw + 1em * var(--factor));
+}
+
+main {
+  grid-column-gap: calc(var(--block-spacing-horizontal) * 3);
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+body > nav {
+  border-bottom: 1px solid #000;
+}
+
+.docfy-demo__description__header {
+  position: relative;
+  min-height: 1.5em;
+}
+
+.docfy-demo__description__header__edit-url {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+}
+
+[role='document'] footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.references {
+  padding-left: 0;
+}
+
+.references li {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 4px;
+}
