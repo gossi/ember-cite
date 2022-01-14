@@ -1,15 +1,13 @@
 import Component from '@glimmer/component';
 
-import Person from 'ember-cite/models/person';
+import type Person from 'ember-cite/models/person';
 
-interface ReferencesFormatterApaPersonArgs {
+interface PersonApaFormatterArgs {
   person: Person;
   as: string;
 }
 
-export default class ReferencesFormatterApaPersonComponent extends Component<
-  ReferencesFormatterApaPersonArgs
-> {
+export default class PersonApaFormatterComponent extends Component<PersonApaFormatterArgs> {
   get initials(): string {
     const middle = this.args.person.middle ? this.args.person.middle : [];
     const names = [this.args.person.given, ...middle];

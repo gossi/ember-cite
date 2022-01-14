@@ -1,22 +1,22 @@
+import type { EditoredComponent } from 'ember-cite/components/references/base/component';
+import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
+import type ReferencesComponent from 'ember-cite/components/references/component';
+import type Person from 'ember-cite/models/person';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import type { BookFields } from 'ember-cite/models/references/book';
+import BookReference from 'ember-cite/models/references/book';
 
-import ReferencesBaseComponent, {
-  EditoredComponent
-} from 'ember-cite/components/references/base/component';
-import ReferencesComponent from 'ember-cite/components/references/component';
-import Person from 'ember-cite/models/person';
-import { ReferenceFields } from 'ember-cite/models/reference';
-import BookReference, { BookFields } from 'ember-cite/models/references/book';
-
-interface ReferencesBookArgs extends BookFields, ReferenceFields {
+interface BookEntryArgs extends BookFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesBookComponent
-  extends ReferencesBaseComponent<ReferencesBookArgs>
-  implements EditoredComponent {
+export default class BookEntryComponent
+  extends ReferencesBaseComponent<BookEntryArgs>
+  implements EditoredComponent
+{
   reference: BookReference;
 
-  constructor(owner: unknown, args: ReferencesBookArgs) {
+  constructor(owner: unknown, args: BookEntryArgs) {
     super(owner, args);
 
     this.reference = new BookReference(args);

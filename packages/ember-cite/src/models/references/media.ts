@@ -1,5 +1,6 @@
-import Person from 'ember-cite/models/person';
-import Reference, { ReferenceFields } from 'ember-cite/models/reference';
+import type Person from 'ember-cite/models/person';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import Reference from 'ember-cite/models/reference';
 import { Medium } from 'ember-cite/types/media';
 import { ReferenceType } from 'ember-cite/types/reference';
 import { tracked } from 'tracked-built-ins';

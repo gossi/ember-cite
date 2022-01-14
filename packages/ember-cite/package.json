@@ -37,9 +37,9 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@embroider/addon-shim": "^0.50.0",
-    "@embroider/macros": "^0.50.0",
-    "@embroider/util": "^0.50.0",
+    "@embroider/addon-shim": "^0.50.1",
+    "@embroider/macros": "^0.50.1",
+    "@embroider/util": "^0.50.1",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "ember-assign-helper": "^0.4.0",
@@ -54,7 +54,7 @@
     "@babel/plugin-proposal-decorators": "^7.16.7",
     "@babel/plugin-syntax-decorators": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@embroider/addon-dev": "^0.50.0",
+    "@embroider/addon-dev": "^0.50.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/eslint": "^8.2.2",
@@ -68,7 +68,6 @@
     "eslint-plugin-ember": "^10.5.8",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-qunit": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "release-it": "^14.12.1",
@@ -83,6 +82,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "exports": {
+    "./*": "./dist/*",
+    "./addon-main.js": "./addon-main.js"
+  },
   "ember": {
     "edition": "octane"
   },
@@ -92,8 +95,6 @@
     "main": "addon-main.js",
     "app-js": {
       "./components/references/component.js": "./dist/_app_/components/references/component.js",
-      "./components/references/formatter/apa/component.js": "./dist/_app_/components/references/formatter/apa/component.js",
-      "./components/references/formatter.js": "./dist/_app_/components/references/formatter.js",
       "./components/references/template.js": "./dist/_app_/components/references/template.js",
       "./components/references/article/component.js": "./dist/_app_/components/references/article/component.js",
       "./components/references/article/template.js": "./dist/_app_/components/references/article/template.js",
@@ -108,7 +109,7 @@
       "./components/references/base/author/component.js": "./dist/_app_/components/references/base/author/component.js",
       "./components/references/base/editor/component.js": "./dist/_app_/components/references/base/editor/component.js",
       "./components/references/base/producer/component.js": "./dist/_app_/components/references/base/producer/component.js",
-      "./components/references/formatter/apa/formatter.js": "./dist/_app_/components/references/formatter/apa/formatter.js",
+      "./components/references/formatter/apa/component.js": "./dist/_app_/components/references/formatter/apa/component.js",
       "./components/references/formatter/apa/template.js": "./dist/_app_/components/references/formatter/apa/template.js",
       "./components/references/media/tv-episode/component.js": "./dist/_app_/components/references/media/tv-episode/component.js",
       "./components/references/media/tv-episode/template.js": "./dist/_app_/components/references/media/tv-episode/template.js",
@@ -148,9 +149,5 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
-  },
-  "exports": {
-    "./*": "./dist/*",
-    "./addon-main.js": "./addon-main.js"
   }
 }

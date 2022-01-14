@@ -1,5 +1,5 @@
-import Person from 'ember-cite/models/person';
-import { ReferenceType } from 'ember-cite/types/reference';
+import type Person from 'ember-cite/models/person';
+import type { ReferenceType } from 'ember-cite/types/reference';
 
 export interface ReferenceFields {
   id?: string;
@@ -21,7 +21,7 @@ export interface ReferenceFields {
 export default abstract class Reference implements ReferenceFields {
   abstract type: ReferenceType;
 
-  id: string = '';
+  id = '';
   title?: string;
 
   year?: number;

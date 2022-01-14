@@ -1,20 +1,17 @@
 import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
-import ReferencesComponent from 'ember-cite/components/references/component';
-import { ReferenceFields } from 'ember-cite/models/reference';
-import ThesisReference, {
-  ThesisFields
-} from 'ember-cite/models/references/thesis';
+import type ReferencesComponent from 'ember-cite/components/references/component';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import type { ThesisFields } from 'ember-cite/models/references/thesis';
+import ThesisReference from 'ember-cite/models/references/thesis';
 
-interface ReferencesThesisArgs extends ThesisFields, ReferenceFields {
+interface ThesisEntryArgs extends ThesisFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesThesisComponent extends ReferencesBaseComponent<
-  ReferencesThesisArgs
-> {
+export default class ThesisEntryComponent extends ReferencesBaseComponent<ThesisEntryArgs> {
   reference: ThesisReference;
 
-  constructor(owner: unknown, args: ReferencesThesisArgs) {
+  constructor(owner: unknown, args: ThesisEntryArgs) {
     super(owner, args);
 
     this.reference = new ThesisReference(args);

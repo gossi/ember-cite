@@ -1,15 +1,12 @@
 import Component from '@glimmer/component';
-
-import MediaReference from 'ember-cite/models/references/media';
+import type MediaReference from 'ember-cite/models/references/media';
 import { getSeries, lookupMediaType } from 'ember-cite/utils/microformats';
 
-export interface ReferencesFormatterApaMediaArgs {
+export interface MediaApaFormatterArgs {
   reference: MediaReference;
 }
 
-export default class ReferencesFormatterApaMediaComponent extends Component<
-  ReferencesFormatterApaMediaArgs
-> {
+export default class MediaApaFormatterComponent extends Component<MediaApaFormatterArgs> {
   /**
    * itemtype from the given medium
    */
@@ -20,7 +17,7 @@ export default class ReferencesFormatterApaMediaComponent extends Component<
    */
   seriesType: string;
 
-  constructor(owner: unknown, args: ReferencesFormatterApaMediaArgs) {
+  constructor(owner: unknown, args: MediaApaFormatterArgs) {
     super(owner, args);
 
     this.type = lookupMediaType(args.reference.medium);

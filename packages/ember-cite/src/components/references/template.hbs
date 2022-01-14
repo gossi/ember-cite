@@ -10,6 +10,6 @@
   Webisode=(component 'references/media/webisode' parent=this)
 )}}
 
-{{#let this.formatterComponent as |Listings|}}
+{{#let (component this.formatterComponent) as |Listings|}}
   <Listings @references={{this.references}} ...attributes />
 {{/let}}
