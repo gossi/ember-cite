@@ -1,3 +1,5 @@
+# Blog Post
+
 ```hbs template
 <References class="references" as |l|>
   <l.BlogPost

@@ -2,6 +2,6 @@
 category: components
 ---
 
-# Blog post
+# Web
 
-Blog post content
+Web entries
