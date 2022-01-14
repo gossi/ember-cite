@@ -1,6 +1,6 @@
 {
   "name": "ember-cite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Academic/Scientific citation with microformats",
   "keywords": [
     "ember-addon",
