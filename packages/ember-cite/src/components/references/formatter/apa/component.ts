@@ -5,13 +5,12 @@ import Reference from 'ember-cite/models/reference';
 // import { importSync } from '@embroider/macros';
 // import { ensureSafeComponent } from '@embroider/util';
 
-export interface ReferencesFormatterApaArgs {
+export interface ApaFormatterArgs {
   reference: Reference;
 }
 
-export default class ReferencesFormatterApaComponent extends Component<
-  ReferencesFormatterApaArgs
-> {
+// eslint-disable-next-line ember/no-empty-glimmer-component-classes
+export default class ApaFormatterComponent extends Component<ApaFormatterArgs> {
   // makeFormatter(reference: Reference) {
   //   const module = importSync(`./${reference.type}`);
   //   // @ts-ignore

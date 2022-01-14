@@ -1,21 +1,18 @@
 import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
-import ReferencesComponent from 'ember-cite/components/references/component';
-import { ReferenceFields } from 'ember-cite/models/reference';
-import MediaReference, {
-  MediaFields
-} from 'ember-cite/models/references/media';
+import type ReferencesComponent from 'ember-cite/components/references/component';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import type { MediaFields } from 'ember-cite/models/references/media';
+import MediaReference from 'ember-cite/models/references/media';
 import { Medium } from 'ember-cite/types/media';
 
-export interface ReferencesMediaArgs extends MediaFields, ReferenceFields {
+export interface MediaEntryArgs extends MediaFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesMediaComponent extends ReferencesBaseComponent<
-  ReferencesMediaArgs
-> {
+export default class MediaEntryComponent extends ReferencesBaseComponent<MediaEntryArgs> {
   reference: MediaReference;
 
-  constructor(owner: unknown, args: ReferencesMediaArgs) {
+  constructor(owner: unknown, args: MediaEntryArgs) {
     super(owner, args);
 
     this.reference = new MediaReference(Medium.Media, args);

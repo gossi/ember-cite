@@ -1,20 +1,18 @@
-
 import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
-import ReferencesComponent from 'ember-cite/components/references/component';
-import { ReferenceFields } from 'ember-cite/models/reference';
-import WebReference, { WebFields } from 'ember-cite/models/references/web';
+import type ReferencesComponent from 'ember-cite/components/references/component';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import type { WebFields } from 'ember-cite/models/references/web';
+import WebReference from 'ember-cite/models/references/web';
 import { WebFormat } from 'ember-cite/types/web';
 
-export interface ReferencesWebArgs extends WebFields, ReferenceFields {
+export interface WebPageEntryArgs extends WebFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesWebComponent extends ReferencesBaseComponent<
-  ReferencesWebArgs
-> {
+export default class WebPageEntryComponent extends ReferencesBaseComponent<WebPageEntryArgs> {
   reference: WebReference;
 
-  constructor(owner: unknown, args: ReferencesWebArgs) {
+  constructor(owner: unknown, args: WebPageEntryArgs) {
     super(owner, args);
 
     this.reference = new WebReference(WebFormat.WebPage, args);

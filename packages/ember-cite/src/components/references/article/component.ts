@@ -1,24 +1,20 @@
-
 import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
-import ReferencesComponent from 'ember-cite/components/references/component';
-import { ReferenceFields } from 'ember-cite/models/reference';
-import JournalReference, {
-  JournalFields
-} from 'ember-cite/models/references/journal';
+import type ReferencesComponent from 'ember-cite/components/references/component';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import ArticleReference from 'ember-cite/models/references/article';
+import type { ArticleFields } from 'ember-cite/models/references/article';
 
-interface ReferencesJournalArgs extends JournalFields, ReferenceFields {
+interface ArticleEntryArgs extends ArticleFields, ReferenceFields {
   parent: ReferencesComponent;
 }
 
-export default class ReferencesJournalComponent extends ReferencesBaseComponent<
-  ReferencesJournalArgs
-> {
-  reference: JournalReference;
+export default class ArticleEntryComponent extends ReferencesBaseComponent<ArticleEntryArgs> {
+  reference: ArticleReference;
 
-  constructor(owner: unknown, args: ReferencesJournalArgs) {
+  constructor(owner: unknown, args: ArticleEntryArgs) {
     super(owner, args);
 
-    this.reference = new JournalReference(args);
+    this.reference = new ArticleReference(args);
 
     args.parent.addReference(this.reference);
   }

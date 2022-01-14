@@ -1,4 +1,5 @@
-import Reference, { ReferenceFields } from 'ember-cite/models/reference';
+import type { ReferenceFields } from 'ember-cite/models/reference';
+import Reference from 'ember-cite/models/reference';
 import { ReferenceType } from 'ember-cite/types/reference';
 import { WebFormat } from 'ember-cite/types/web';
 

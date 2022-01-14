@@ -1,15 +1,13 @@
 import Component from '@glimmer/component';
 
-import Person from 'ember-cite/models/person';
+import type Person from 'ember-cite/models/person';
 
-interface ReferencesFormatterApaPeopleArgs {
+interface PeopleApaFormatterArgs {
   people: Person[];
   as: string;
 }
 
-export default class ReferencesFormatterApaPeopleComponent extends Component<
-  ReferencesFormatterApaPeopleArgs
-> {
+export default class PeopleApaFormatterComponent extends Component<PeopleApaFormatterArgs> {
   get amount(): number {
     // the minus 2 is to not do that math in the template, but just run the
     // comparison on that value

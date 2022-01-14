@@ -1,4 +1,4 @@
-import Person from 'ember-cite/models/person';
+import type Person from 'ember-cite/models/person';
 import Reference from 'ember-cite/models/reference';
 import { ReferenceType } from 'ember-cite/types/reference';
 import { tracked } from 'tracked-built-ins';
