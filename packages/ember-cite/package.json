@@ -37,9 +37,9 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@embroider/addon-shim": "^0.50.0",
-    "@embroider/macros": "^0.50.0",
-    "@embroider/util": "^0.50.0",
+    "@embroider/addon-shim": "^0.50.1",
+    "@embroider/macros": "^0.50.1",
+    "@embroider/util": "^0.50.1",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "ember-assign-helper": "^0.4.0",
@@ -54,7 +54,7 @@
     "@babel/plugin-proposal-decorators": "^7.16.7",
     "@babel/plugin-syntax-decorators": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@embroider/addon-dev": "^0.50.0",
+    "@embroider/addon-dev": "^0.50.1",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/eslint": "^8.2.2",
@@ -68,7 +68,6 @@
     "eslint-plugin-ember": "^10.5.8",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-qunit": "^7.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "release-it": "^14.12.1",
@@ -83,6 +82,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "exports": {
+    "./*": "./dist/*",
+    "./addon-main.js": "./addon-main.js"
+  },
   "ember": {
     "edition": "octane"
   },
@@ -91,47 +94,29 @@
     "type": "addon",
     "main": "addon-main.js",
     "app-js": {
-      "./components/references/component.js": "./dist/_app_/components/references/component.js",
-      "./components/references/formatter/apa/component.js": "./dist/_app_/components/references/formatter/apa/component.js",
-      "./components/references/formatter.js": "./dist/_app_/components/references/formatter.js",
-      "./components/references/template.js": "./dist/_app_/components/references/template.js",
-      "./components/references/article/component.js": "./dist/_app_/components/references/article/component.js",
-      "./components/references/article/template.js": "./dist/_app_/components/references/article/template.js",
-      "./components/references/base/component.js": "./dist/_app_/components/references/base/component.js",
-      "./components/references/base/template.js": "./dist/_app_/components/references/base/template.js",
-      "./components/references/book/component.js": "./dist/_app_/components/references/book/component.js",
-      "./components/references/book/template.js": "./dist/_app_/components/references/book/template.js",
-      "./components/references/media/component.js": "./dist/_app_/components/references/media/component.js",
-      "./components/references/media/template.js": "./dist/_app_/components/references/media/template.js",
-      "./components/references/thesis/component.js": "./dist/_app_/components/references/thesis/component.js",
-      "./components/references/thesis/template.js": "./dist/_app_/components/references/thesis/template.js",
-      "./components/references/base/author/component.js": "./dist/_app_/components/references/base/author/component.js",
-      "./components/references/base/editor/component.js": "./dist/_app_/components/references/base/editor/component.js",
-      "./components/references/base/producer/component.js": "./dist/_app_/components/references/base/producer/component.js",
-      "./components/references/formatter/apa/formatter.js": "./dist/_app_/components/references/formatter/apa/formatter.js",
-      "./components/references/formatter/apa/template.js": "./dist/_app_/components/references/formatter/apa/template.js",
-      "./components/references/media/tv-episode/component.js": "./dist/_app_/components/references/media/tv-episode/component.js",
-      "./components/references/media/tv-episode/template.js": "./dist/_app_/components/references/media/tv-episode/template.js",
-      "./components/references/media/video/component.js": "./dist/_app_/components/references/media/video/component.js",
-      "./components/references/media/video/template.js": "./dist/_app_/components/references/media/video/template.js",
-      "./components/references/media/webisode/component.js": "./dist/_app_/components/references/media/webisode/component.js",
-      "./components/references/media/webisode/template.js": "./dist/_app_/components/references/media/webisode/template.js",
-      "./components/references/web/blog-post/component.js": "./dist/_app_/components/references/web/blog-post/component.js",
-      "./components/references/web/blog-post/template.js": "./dist/_app_/components/references/web/blog-post/template.js",
-      "./components/references/web/web-page/component.js": "./dist/_app_/components/references/web/web-page/component.js",
-      "./components/references/web/web-page/template.js": "./dist/_app_/components/references/web/web-page/template.js",
-      "./components/references/formatter/apa/article/template.js": "./dist/_app_/components/references/formatter/apa/article/template.js",
-      "./components/references/formatter/apa/book/template.js": "./dist/_app_/components/references/formatter/apa/book/template.js",
-      "./components/references/formatter/apa/media/component.js": "./dist/_app_/components/references/formatter/apa/media/component.js",
-      "./components/references/formatter/apa/media/template.js": "./dist/_app_/components/references/formatter/apa/media/template.js",
-      "./components/references/formatter/apa/web/component.js": "./dist/_app_/components/references/formatter/apa/web/component.js",
-      "./components/references/formatter/apa/web/template.js": "./dist/_app_/components/references/formatter/apa/web/template.js",
-      "./components/references/formatter/apa/parts/authors/template.js": "./dist/_app_/components/references/formatter/apa/parts/authors/template.js",
-      "./components/references/formatter/apa/parts/people/component.js": "./dist/_app_/components/references/formatter/apa/parts/people/component.js",
-      "./components/references/formatter/apa/parts/people/template.js": "./dist/_app_/components/references/formatter/apa/parts/people/template.js",
-      "./components/references/formatter/apa/parts/person/component.js": "./dist/_app_/components/references/formatter/apa/parts/person/component.js",
-      "./components/references/formatter/apa/parts/person/template.js": "./dist/_app_/components/references/formatter/apa/parts/person/template.js",
-      "./components/references/formatter/apa/parts/source/template.js": "./dist/_app_/components/references/formatter/apa/parts/source/template.js"
+      "./components/references.js": "./dist/_app_/components/references.js",
+      "./components/references/article/index.js": "./dist/_app_/components/references/article/index.js",
+      "./components/references/base/index.js": "./dist/_app_/components/references/base/index.js",
+      "./components/references/book/index.js": "./dist/_app_/components/references/book/index.js",
+      "./components/references/media/index.js": "./dist/_app_/components/references/media/index.js",
+      "./components/references/thesis/index.js": "./dist/_app_/components/references/thesis/index.js",
+      "./components/references/base/author/index.js": "./dist/_app_/components/references/base/author/index.js",
+      "./components/references/base/editor/index.js": "./dist/_app_/components/references/base/editor/index.js",
+      "./components/references/base/producer/index.js": "./dist/_app_/components/references/base/producer/index.js",
+      "./components/references/formatter/apa/index.js": "./dist/_app_/components/references/formatter/apa/index.js",
+      "./components/references/media/tv-episode/index.js": "./dist/_app_/components/references/media/tv-episode/index.js",
+      "./components/references/media/video/index.js": "./dist/_app_/components/references/media/video/index.js",
+      "./components/references/media/webisode/index.js": "./dist/_app_/components/references/media/webisode/index.js",
+      "./components/references/web/blog-post/index.js": "./dist/_app_/components/references/web/blog-post/index.js",
+      "./components/references/web/web-page/index.js": "./dist/_app_/components/references/web/web-page/index.js",
+      "./components/references/formatter/apa/article/index.js": "./dist/_app_/components/references/formatter/apa/article/index.js",
+      "./components/references/formatter/apa/book/index.js": "./dist/_app_/components/references/formatter/apa/book/index.js",
+      "./components/references/formatter/apa/media/index.js": "./dist/_app_/components/references/formatter/apa/media/index.js",
+      "./components/references/formatter/apa/web/index.js": "./dist/_app_/components/references/formatter/apa/web/index.js",
+      "./components/references/formatter/apa/parts/authors/index.js": "./dist/_app_/components/references/formatter/apa/parts/authors/index.js",
+      "./components/references/formatter/apa/parts/people/index.js": "./dist/_app_/components/references/formatter/apa/parts/people/index.js",
+      "./components/references/formatter/apa/parts/person/index.js": "./dist/_app_/components/references/formatter/apa/parts/person/index.js",
+      "./components/references/formatter/apa/parts/source/index.js": "./dist/_app_/components/references/formatter/apa/parts/source/index.js"
     }
   },
   "release-it": {
@@ -148,9 +133,5 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
-  },
-  "exports": {
-    "./*": "./dist/*",
-    "./addon-main.js": "./addon-main.js"
   }
 }
