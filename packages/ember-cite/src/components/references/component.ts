@@ -7,6 +7,7 @@ import FormatterFactory from 'ember-cite/formatter/factory';
 import type Formatter from 'ember-cite/formatter/formatter';
 import Reference from 'ember-cite/models/reference';
 import { tracked } from 'tracked-built-ins';
+import { cached } from '@glimmer/tracking';
 
 interface ReferencesArgs {
   style?: string;
@@ -18,7 +19,9 @@ export default class ReferencesComponent extends Component<ReferencesArgs> {
 
   style: string;
 
+  @cached
   get references(): Reference[] {
+    this.formatter.fix(this.entries);
     return this.formatter.sort(this.entries);
   }
 
@@ -39,7 +42,6 @@ export default class ReferencesComponent extends Component<ReferencesArgs> {
   addReference(reference: Reference) {
     next(() => {
       this.entries.push(reference);
-      this.formatter.fix(this.entries);
     });
   }
 }

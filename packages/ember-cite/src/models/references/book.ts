@@ -16,5 +16,5 @@ export interface BookFields {
 export default class BookReference extends Reference implements BookFields {
   type = ReferenceType.Book;
 
-  @tracked editors: Person[] = tracked([]);
+  editors: Person[] = tracked([]);
 }

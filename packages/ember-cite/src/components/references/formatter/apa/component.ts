@@ -6,7 +6,7 @@ import Reference from 'ember-cite/models/reference';
 // import { ensureSafeComponent } from '@embroider/util';
 
 export interface ApaFormatterArgs {
-  reference: Reference;
+  references: Reference[];
 }
 
 // eslint-disable-next-line ember/no-empty-glimmer-component-classes

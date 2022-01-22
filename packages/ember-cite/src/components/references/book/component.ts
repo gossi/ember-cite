@@ -1,3 +1,4 @@
+import { next } from '@ember/runloop';
 import type { EditoredComponent } from 'ember-cite/components/references/base/component';
 import ReferencesBaseComponent from 'ember-cite/components/references/base/component';
 import type ReferencesComponent from 'ember-cite/components/references/component';
@@ -25,6 +26,8 @@ export default class BookEntryComponent
   }
 
   addEditor(person: Person) {
-    this.reference.editors.push(person);
+    next(() => {
+      this.reference.editors.push(person);
+    });
   }
 }

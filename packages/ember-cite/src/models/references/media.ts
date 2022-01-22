@@ -14,7 +14,7 @@ export default class MediaReference extends Reference implements MediaFields {
 
   medium: Medium;
 
-  @tracked producers: Person[] = tracked([]);
+  producers: Person[] = tracked([]);
 
   constructor(medium: Medium, properties: ReferenceFields) {
     super(properties);
