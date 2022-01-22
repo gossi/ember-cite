@@ -4,7 +4,7 @@ import type Reference from 'ember-cite/models/reference';
 
 export default class ApaFormatter implements Formatter {
   sort(references: Reference[]): Reference[] {
-    return references.sort((a, b) => {
+    return [...references].sort((a, b) => {
       let amountCmp;
 
       if (a.authors.length === b.authors.length) {
@@ -58,7 +58,7 @@ export default class ApaFormatter implements Formatter {
   private fixYear(entries: Reference[]) {
     const store: { [rawId: string]: Reference[] } = {};
     for (const entry of entries) {
-      const id = entry.compileRawId();
+      const { id } = entry;
       if (!store[id]) {
         store[id] = [];
       }
@@ -71,7 +71,6 @@ export default class ApaFormatter implements Formatter {
         for (const reference of references) {
           const i = references.indexOf(reference);
           reference.yearSuffix = String.fromCharCode(97 + i);
-          reference.updateId();
         }
       }
     }

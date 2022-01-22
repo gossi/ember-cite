@@ -2,5 +2,13 @@
 
 module.exports = {
   singleQuote: true,
-  trailingComma: 'none'
+  trailingComma : "none",
+  overrides: [
+    {
+      files: ['*.md', '*.hbs'],
+      options: {
+        singleQuote: false
+      }
+    }
+  ]
 };

@@ -37,9 +37,8 @@ export default class ReferencesBaseComponent<T extends object>
   @tracked reference!: Reference;
 
   addAuthor(person: Person) {
-    this.reference.authors.push(person);
     next(() => {
-      this.reference.updateId();
+      this.reference.authors.push(person);
     });
   }
 }

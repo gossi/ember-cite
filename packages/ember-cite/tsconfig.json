@@ -27,6 +27,12 @@
     "noImplicitReturns": true,
 
     "paths": {
+      "@glimmer/tracking": [
+        "../../node_modules/ember-cached-decorator-polyfill",
+        "../../node_modules/@glimmer/tracking/dist/types",
+        "node_modules/ember-cached-decorator-polyfill",
+        "node_modules/@glimmer/tracking/dist/types"
+      ],
       "ember-cite": [
         "src"
       ],
